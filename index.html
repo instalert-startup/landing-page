@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de tu Proyecto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-600">MiProyecto</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#hero" class="hover:text-blue-600">Inicio</a></li>
+                <li><a href="#nosotros" class="hover:text-blue-600">Nosotros</a></li>
+                <li><a href="#team" class="hover:text-blue-600">Equipo</a></li>
+                <li><a href="#recomendaciones" class="hover:text-blue-600">Recomendaciones</a></li>
+                <li><a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+        <div class="bg-black bg-opacity-50 p-10 rounded-xl">
+            <h1 class="text-5xl font-bold mb-4">Bienvenidos a Nombre del Proyecto</h1>
+            <p class="text-xl mb-6">Transformamos tus ideas en realidad con innovación.</p>
+            <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition">¡Empieza ahora!</a>
+        </div>
+    </header>
+
+    <section id="nosotros" class="py-20 container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-8">Nosotros</h2>
+        <p class="max-w-2xl mx-auto text-lg text-gray-600">Somos un equipo apasionado dedicado a ofrecer soluciones digitales de alta calidad. Nuestra misión es potenciar tu crecimiento a través de tecnología de punta y diseño centrado en el usuario.</p>
+    </section>
+
+    <section id="team" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Nuestro Equipo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                    <h3 class="font-bold text-xl">Nombre Apellido</h3>
+                    <p class="text-blue-600">CEO & Fundador</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                    <h3 class="font-bold text-xl">Nombre Apellido</h3>
+                    <p class="text-blue-600">Desarrollador Lead</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                    <h3 class="font-bold text-xl">Nombre Apellido</h3>
+                    <p class="text-blue-600">Diseñador UX/UI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recomendaciones" class="py-20 container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <blockquote class="bg-blue-50 p-6 rounded-lg italic border-l-4 border-blue-600">
+                "¡Increíble servicio! Lograron elevar nuestras ventas en un 30% en tiempo récord." - Cliente A
+            </blockquote>
+            <blockquote class="bg-blue-50 p-6 rounded-lg italic border-l-4 border-blue-600">
+                "Profesionales, atentos y muy creativos. Sin duda volveremos a trabajar con ellos." - Cliente B
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Contáctanos</h2>
+            <form class="max-w-lg mx-auto grid grid-cols-1 gap-4">
+                <input type="text" placeholder="Tu Nombre" class="p-3 rounded text-gray-900">
+                <input type="email" placeholder="Tu Email" class="p-3 rounded text-gray-900">
+                <textarea placeholder="Tu Mensaje" class="p-3 rounded h-32 text-gray-900"></textarea>
+                <button class="bg-blue-600 hover:bg-blue-700 p-3 rounded font-bold">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-6 bg-gray-800 text-center text-gray-400">
+        <p>&copy; 2026 MiProyecto. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
