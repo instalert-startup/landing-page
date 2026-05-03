@@ -15,13 +15,12 @@
                 <li><a href="#hero" class="hover:text-blue-600">Inicio</a></li>
                 <li><a href="#nosotros" class="hover:text-blue-600">Nosotros</a></li>
                 <li><a href="#team" class="hover:text-blue-600">Equipo</a></li>
-                <li><a href="#recomendaciones" class="hover:text-blue-600">Recomendaciones</a></li>
                 <li><a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <header id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+    <header id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80');">
         <div class="bg-black bg-opacity-50 p-10 rounded-xl">
             <h1 class="text-5xl font-bold mb-4">Bienvenidos a InstAlert</h1>
             <p class="text-xl mb-6">Seguridad para todos</p>
@@ -29,43 +28,87 @@
         </div>
     </header>
 
+    <div id="planes" class="py-20 bg-gray-100">
+        <h2 class="text-4xl font-bold text-center mb-12">Planes de Seguridad</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-6">
+
+            <!-- Plan Básico -->
+            <div class="bg-white p-8 rounded-xl shadow w-80 text-center">
+            <h3 class="text-2xl font-bold mb-4">Básico</h3>
+            <p class="text-gray-600 mb-6">Para ciudadanos</p>
+            <p class="text-3xl font-bold text-blue-600 mb-6">Gratis</p>
+            <ul class="text-gray-600 space-y-2 mb-6">
+                <li>✔ Alertas comunitarias</li>
+                <li>✔ Reporte de incidentes</li>
+                <li>✔ Acceso básico</li>
+            </ul>
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+                Elegir
+            </button>
+            </div>
+
+            <!-- Plan Intermedio -->
+            <div class="bg-blue-600 text-white p-8 rounded-xl shadow-lg w-80 text-center scale-105">
+            <h3 class="text-2xl font-bold mb-4">Intermedio</h3>
+            <p class="mb-6">Mayor protección</p>
+            <p class="text-3xl font-bold mb-6">S/ 19.90</p>
+            <ul class="space-y-2 mb-6">
+                <li>✔ Todo lo básico</li>
+                <li>✔ Botón de pánico</li>
+                <li>✔ Historial de alertas</li>
+            </ul>
+            <button class="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-gray-200">
+                Elegir
+            </button>
+            </div>
+
+            <!-- Plan Premium -->
+            <div class="bg-white p-8 rounded-xl shadow w-80 text-center">
+            <h3 class="text-2xl font-bold mb-4">Premium</h3>
+            <p class="text-gray-600 mb-6">Seguridad avanzada</p>
+            <p class="text-3xl font-bold text-blue-600 mb-6">S/ 39.90</p>
+            <ul class="text-gray-600 space-y-2 mb-6">
+                <li>✔ Monitoreo 24/7</li>
+                <li>✔ Integración con cámaras</li>
+                <li>✔ Soporte prioritario</li>
+            </ul>
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+                Elegir
+            </button>
+            </div>
+        </div>
+    </div>
+
     <section id="nosotros" class="py-20 container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold mb-8">Nosotros</h2>
-        <p class="max-w-2xl mx-auto text-lg text-gray-600">Somos un equipo apasionado dedicado a ofrecer soluciones digitales de alta calidad. Nuestra misión es potenciar tu crecimiento a través de tecnología de punta y diseño centrado en el usuario.</p>
+        <p class="max-w-2xl mx-auto text-lg text-gray-600">Somos un equipo apasionado dedicado a ofrecer soluciones de seguridad digitales de alta calidad. Nuestra misión es potenciar tu crecimiento a través de tecnología de punta y diseño centrado en el usuario.</p>
     </section>
 
     <section id="team" class="py-20 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12">Nuestro Equipo</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow text-center">
                     <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-xl">Nombre Apellido</h3>
-                    <p class="text-blue-600">CEO & Fundador</p>
+                    <h3 class="font-bold text-xl">Piero Leonardo Molina Falcón</h3>
+                    <p class="text-blue-600">Developer</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow text-center">
                     <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-xl">Nombre Apellido</h3>
-                    <p class="text-blue-600">Desarrollador Lead</p>
+                    <h3 class="font-bold text-xl">Sebastian Victor Andre Diaz Mendoza</h3>
+                    <p class="text-blue-600">Developer</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow text-center">
                     <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-xl">Nombre Apellido</h3>
-                    <p class="text-blue-600">Diseñador UX/UI</p>
+                    <h3 class="font-bold text-xl">Alexander Paolo Justo Yauricasa</h3>
+                    <p class="text-blue-600">Developer</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                    <h3 class="font-bold text-xl">Breithner Rodolfo Perez Encarnación</h3>
+                    <p class="text-blue-600">Developer</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="recomendaciones" class="py-20 container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <blockquote class="bg-blue-50 p-6 rounded-lg italic border-l-4 border-blue-600">
-                "¡Increíble servicio! Lograron elevar nuestras ventas en un 30% en tiempo récord." - Cliente A
-            </blockquote>
-            <blockquote class="bg-blue-50 p-6 rounded-lg italic border-l-4 border-blue-600">
-                "Profesionales, atentos y muy creativos. Sin duda volveremos a trabajar con ellos." - Cliente B
-            </blockquote>
         </div>
     </section>
 
@@ -82,7 +125,7 @@
     </section>
 
     <footer class="py-6 bg-gray-800 text-center text-gray-400">
-        <p>&copy; 2026 MiProyecto. Todos los derechos reservados.</p>
+        <p>&copy; 2026 InstAlert. Todos los derechos reservados.</p>
     </footer>
 
 </body>
