@@ -3,129 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InstAlert</title>
+    <title>InstAlert - Seguridad en tiempo real</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-white text-gray-900">
 
-    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold text-blue-600">InstAlert</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#hero" class="hover:text-blue-600">Inicio</a></li>
-                <li><a href="#nosotros" class="hover:text-blue-600">Nosotros</a></li>
-                <li><a href="#team" class="hover:text-blue-600">Equipo</a></li>
-                <li><a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Contacto</a></li>
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center gap-2">
+                <div class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">!</div>
+                <span class="text-2xl font-extrabold tracking-tight">Inst<span class="text-red-600">Alert</span></span>
+            </div>
+            
+            <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
+                <li><a href="#inicio" class="hover:text-red-600 transition">Inicio</a></li>
+                <li><a href="#planes" class="hover:text-red-600 transition">Planes</a></li>
+                <li><a href="#testimonios" class="hover:text-red-600 transition">Testimonios</a></li> <li><a href="#nosotros" class="hover:text-red-600 transition">Nosotros</a></li>
+                <li><a href="#team" class="hover:text-red-600 transition">Equipo</a></li>
             </ul>
+
+            <a href="#contacto" class="bg-red-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+                Iniciar sesión
+            </a>
         </div>
     </nav>
 
-    <header id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80');">
-        <div class="bg-black bg-opacity-50 p-10 rounded-xl">
-            <h1 class="text-5xl font-bold mb-4">Bienvenidos a InstAlert</h1>
-            <p class="text-xl mb-6">Seguridad para todos</p>
-            <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition">¡Empieza ahora!</a>
+    <header id="inicio" class="min-h-[80vh] flex items-center bg-white">
+        <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-5xl md:text-6xl font-black leading-tight text-slate-900">
+                    Anticípate a situaciones de <span class="text-red-600">riesgo</span> en tiempo real
+                </h1>
+                <div class="space-y-4">
+                    <p class="text-lg text-gray-700 font-semibold">Seguridad inteligente para tu día a día</p>
+                    <p class="text-gray-500 text-lg">Recibe alertas, visualiza zonas de riesgo y actúa rápidamente para mantenerte seguro.</p>
+                </div>
+                <div class="pt-4">
+                    <a href="#planes" class="inline-block bg-red-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-red-200 hover:bg-red-700 transition transform hover:-translate-y-1">
+                        Ver zonas de riesgo
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 transform md:rotate-2">
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800" alt="Mapa de riesgo" class="w-full">
+                    <div class="absolute top-1/3 left-1/2 w-4 h-4 bg-red-600 rounded-full animate-ping"></div>
+                    <div class="absolute top-1/3 left-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <div id="planes" class="py-20 bg-gray-100">
-        <h2 class="text-4xl font-bold text-center mb-12">Planes de Seguridad</h2>
+    <section id="planes" class="py-24 bg-gray-50">
+        <h2 class="text-4xl font-black text-center mb-16">Planes de Seguridad</h2>
         <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-6">
-
-            <!-- Plan Básico -->
-            <div class="bg-white p-8 rounded-xl shadow w-80 text-center">
-            <h3 class="text-2xl font-bold mb-4">Básico</h3>
-            <p class="text-gray-600 mb-6">Para ciudadanos</p>
-            <p class="text-3xl font-bold text-blue-600 mb-6">Gratis</p>
-            <ul class="text-gray-600 space-y-2 mb-6">
-                <li>✔ Alertas comunitarias</li>
-                <li>✔ Reporte de incidentes</li>
-                <li>✔ Acceso básico</li>
-            </ul>
-            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-                Elegir
-            </button>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 w-80 text-center">
+                <h3 class="text-2xl font-bold mb-4 text-gray-800">Básico</h3>
+                <p class="text-3xl font-black text-red-600 mb-6">Gratis</p>
+                <ul class="text-gray-600 space-y-3 mb-8 text-left">
+                    <li>✔ Alertas comunitarias</li>
+                    <li>✔ Reporte de incidentes</li>
+                </ul>
+                <button class="w-full border-2 border-red-600 text-red-600 font-bold py-2 rounded-lg hover:bg-red-50 transition">Elegir</button>
             </div>
-
-            <!-- Plan Intermedio -->
-            <div class="bg-blue-600 text-white p-8 rounded-xl shadow-lg w-80 text-center scale-105">
-            <h3 class="text-2xl font-bold mb-4">Intermedio</h3>
-            <p class="mb-6">Mayor protección</p>
-            <p class="text-3xl font-bold mb-6">S/ 19.90</p>
-            <ul class="space-y-2 mb-6">
-                <li>✔ Todo lo básico</li>
-                <li>✔ Botón de pánico</li>
-                <li>✔ Historial de alertas</li>
-            </ul>
-            <button class="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-gray-200">
-                Elegir
-            </button>
+            <div class="bg-red-600 text-white p-8 rounded-2xl shadow-2xl shadow-red-200 w-80 text-center md:scale-110">
+                <h3 class="text-2xl font-bold mb-4">Intermedio</h3>
+                <p class="text-3xl font-black mb-6">S/ 19.90</p>
+                <ul class="space-y-3 mb-8 text-left">
+                    <li>✔ Todo lo básico</li>
+                    <li>✔ Botón de pánico</li>
+                    <li>✔ Historial de alertas</li>
+                </ul>
+                <button class="w-full bg-white text-red-600 font-bold py-2 rounded-lg hover:bg-gray-100 transition">Elegir</button>
             </div>
-
-            <!-- Plan Premium -->
-            <div class="bg-white p-8 rounded-xl shadow w-80 text-center">
-            <h3 class="text-2xl font-bold mb-4">Premium</h3>
-            <p class="text-gray-600 mb-6">Seguridad avanzada</p>
-            <p class="text-3xl font-bold text-blue-600 mb-6">S/ 39.90</p>
-            <ul class="text-gray-600 space-y-2 mb-6">
-                <li>✔ Monitoreo 24/7</li>
-                <li>✔ Integración con cámaras</li>
-                <li>✔ Soporte prioritario</li>
-            </ul>
-            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-                Elegir
-            </button>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 w-80 text-center">
+                <h3 class="text-2xl font-bold mb-4 text-gray-800">Premium</h3>
+                <p class="text-3xl font-black text-red-600 mb-6">S/ 39.90</p>
+                <ul class="text-gray-600 space-y-3 mb-8 text-left">
+                    <li>✔ Monitoreo 24/7</li>
+                    <li>✔ Integración con cámaras</li>
+                </ul>
+                <button class="w-full border-2 border-red-600 text-red-600 font-bold py-2 rounded-lg hover:bg-red-50 transition">Elegir</button>
             </div>
         </div>
-    </div>
-
-    <section id="nosotros" class="py-20 container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-8">Nosotros</h2>
-        <p class="max-w-2xl mx-auto text-lg text-gray-600">Somos un equipo apasionado dedicado a ofrecer soluciones de seguridad digitales de alta calidad. Nuestra misión es potenciar tu crecimiento a través de tecnología de punta y diseño centrado en el usuario.</p>
     </section>
 
-    <section id="team" class="py-20 bg-gray-100">
+    <section id="testimonios" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Nuestro Equipo</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-xl">Piero Leonardo Molina Falcón</h3>
-                    <p class="text-blue-600">Developer</p>
+            <h2 class="text-4xl font-black text-center mb-4">Comunidad Segura</h2>
+            <p class="text-gray-500 text-center mb-16 text-lg">Lo que dicen quienes ya usan InstAlert para proteger a sus familias.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"Desde que instalé la app me siento mucho más tranquila al caminar por mi barrio. Las alertas de la comunidad son increíblemente precisas."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold">Carla Méndez</h4>
+                            <p class="text-sm text-red-600">Usuario Básico</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-xl">Sebastian Victor Andre Diaz Mendoza</h3>
-                    <p class="text-blue-600">Developer</p>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"El botón de pánico del plan intermedio nos salvó de un susto hace poco. La respuesta fue mucho más rápida de lo que esperaba."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold">Juan Pablo Ruiz</h4>
+                            <p class="text-sm text-red-600">Usuario Intermedio</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-xl">Alexander Paolo Justo Yauricasa</h3>
-                    <p class="text-blue-600">Developer</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-xl">Breithner Rodolfo Perez Encarnación</h3>
-                    <p class="text-blue-600">Developer</p>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 italic mb-6">"La integración con cámaras de mi negocio me permite monitorear todo desde un solo lugar. Vale cada centavo del plan premium."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold">Elena Ferrán</h4>
+                            <p class="text-sm text-red-600">Empresaria</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">Contáctanos</h2>
-            <form class="max-w-lg mx-auto grid grid-cols-1 gap-4">
-                <input type="text" placeholder="Tu Nombre" class="p-3 rounded text-gray-900">
-                <input type="email" placeholder="Tu Email" class="p-3 rounded text-gray-900">
-                <textarea placeholder="Tu Mensaje" class="p-3 rounded h-32 text-gray-900"></textarea>
-                <button class="bg-blue-600 hover:bg-blue-700 p-3 rounded font-bold">Enviar Mensaje</button>
+    <section id="nosotros" class="py-24 container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-black mb-8">Nosotros</h2>
+        <p class="max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">Somos un equipo dedicado a ofrecer soluciones de seguridad digitales de alta calidad. Nuestra misión es potenciar tu tranquilidad a través de tecnología de punta y visualización de datos en tiempo real.</p>
+    </section>
+
+    <section id="team" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-center mb-16">Nuestro Equipo</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100">
+                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                    <h3 class="font-bold text-lg leading-tight">Piero Molina</h3>
+                    <p class="text-red-600 font-medium">Developer</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100">
+                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                    <h3 class="font-bold text-lg leading-tight">Sebastian Diaz</h3>
+                    <p class="text-red-600 font-medium">Developer</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100">
+                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                    <h3 class="font-bold text-lg leading-tight">Alexander Justo</h3>
+                    <p class="text-red-600 font-medium">Developer</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100">
+                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                    <h3 class="font-bold text-lg leading-tight">Breithner Perez</h3>
+                    <p class="text-red-600 font-medium">Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-slate-900 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black mb-12">Contáctanos</h2>
+            <form class="max-w-lg mx-auto space-y-4">
+                <input type="text" placeholder="Tu Nombre" class="w-full p-4 rounded-xl text-gray-900 focus:ring-2 focus:ring-red-600 outline-none">
+                <input type="email" placeholder="Tu Email" class="w-full p-4 rounded-xl text-gray-900 focus:ring-2 focus:ring-red-600 outline-none">
+                <textarea placeholder="Tu Mensaje" class="w-full p-4 rounded-xl h-32 text-gray-900 focus:ring-2 focus:ring-red-600 outline-none"></textarea>
+                <button class="w-full bg-red-600 hover:bg-red-700 p-4 rounded-xl font-bold text-lg transition shadow-lg shadow-red-900/20">Enviar Mensaje</button>
             </form>
         </div>
     </section>
 
-    <footer class="py-6 bg-gray-800 text-center text-gray-400">
-        <p>&copy; 2026 InstAlert. Todos los derechos reservados.</p>
+    <footer class="py-10 bg-slate-950 text-center text-gray-500 border-t border-slate-800">
+        <p>&copy; 2026 InstAlert. Vigilancia inteligente para tu comunidad.</p>
     </footer>
 
 </body>
