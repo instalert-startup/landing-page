@@ -1,0 +1,84 @@
+{
+  "page": {
+    "title": "InstAlert - Real-time Security"
+  },
+  "nav": {
+    "home": "Home",
+    "plans": "Plans",
+    "testimonials": "Testimonials",
+    "about": "About Us",
+    "team": "Team",
+    "login": "Sign In"
+  },
+  "hero": {
+    "titleBefore": "Anticipate ",
+    "titleHighlight": "risk",
+    "titleAfter": " situations in real time",
+    "subtitle": "Intelligent security for your daily life",
+    "description": "Receive alerts, visualize risk zones, and act quickly to stay safe.",
+    "cta": "View Risk Zones",
+    "imageAlt": "Risk map"
+  },
+  "plans": {
+    "title": "Security Plans",
+    "basic": {
+      "name": "Basic",
+      "price": "Free",
+      "feature1": "Community alerts",
+      "feature2": "Incident reporting",
+      "cta": "Choose"
+    },
+    "standard": {
+      "name": "Standard",
+      "price": "S/ 19.90",
+      "feature1": "Everything in Basic",
+      "feature2": "Panic button",
+      "feature3": "Alert history",
+      "cta": "Choose"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "S/ 39.90",
+      "feature1": "24/7 monitoring",
+      "feature2": "Camera integration",
+      "cta": "Choose"
+    }
+  },
+  "testimonials": {
+    "title": "Safe Community",
+    "subtitle": "What those who already use InstAlert to protect their families say.",
+    "t1": {
+      "text": "\"Since I installed the app I feel much safer walking around my neighborhood. The community alerts are incredibly accurate.\"",
+      "name": "Carla Méndez",
+      "role": "Basic User"
+    },
+    "t2": {
+      "text": "\"The panic button on the standard plan saved us from a scare recently. The response was much faster than I expected.\"",
+      "name": "Juan Pablo Ruiz",
+      "role": "Standard User"
+    },
+    "t3": {
+      "text": "\"The camera integration for my business lets me monitor everything from one place. Worth every penny of the premium plan.\"",
+      "name": "Elena Ferrán",
+      "role": "Business Owner"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are a team dedicated to offering high-quality digital security solutions. Our mission is to enhance your peace of mind through cutting-edge technology and real-time data visualization."
+  },
+  "team": {
+    "title": "Our Team",
+    "role": "Developer"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "submit": "Send Message"
+  },
+  "footer": {
+    "copy": "© 2026 InstAlert. Intelligent surveillance for your community."
+  }
+}

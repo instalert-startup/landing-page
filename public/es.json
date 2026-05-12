@@ -1,0 +1,84 @@
+{
+  "page": {
+    "title": "InstAlert - Seguridad en tiempo real"
+  },
+  "nav": {
+    "home": "Inicio",
+    "plans": "Planes",
+    "testimonials": "Testimonios",
+    "about": "Nosotros",
+    "team": "Equipo",
+    "login": "Iniciar sesión"
+  },
+  "hero": {
+    "titleBefore": "Anticípate a situaciones de ",
+    "titleHighlight": "riesgo",
+    "titleAfter": " en tiempo real",
+    "subtitle": "Seguridad inteligente para tu día a día",
+    "description": "Recibe alertas, visualiza zonas de riesgo y actúa rápidamente para mantenerte seguro.",
+    "cta": "Ver zonas de riesgo",
+    "imageAlt": "Mapa de riesgo"
+  },
+  "plans": {
+    "title": "Planes de Seguridad",
+    "basic": {
+      "name": "Básico",
+      "price": "Gratis",
+      "feature1": "Alertas comunitarias",
+      "feature2": "Reporte de incidentes",
+      "cta": "Elegir"
+    },
+    "standard": {
+      "name": "Intermedio",
+      "price": "S/ 19.90",
+      "feature1": "Todo lo básico",
+      "feature2": "Botón de pánico",
+      "feature3": "Historial de alertas",
+      "cta": "Elegir"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "S/ 39.90",
+      "feature1": "Monitoreo 24/7",
+      "feature2": "Integración con cámaras",
+      "cta": "Elegir"
+    }
+  },
+  "testimonials": {
+    "title": "Comunidad Segura",
+    "subtitle": "Lo que dicen quienes ya usan InstAlert para proteger a sus familias.",
+    "t1": {
+      "text": "\"Desde que instalé la app me siento mucho más tranquila al caminar por mi barrio. Las alertas de la comunidad son increíblemente precisas.\"",
+      "name": "Carla Méndez",
+      "role": "Usuario Básico"
+    },
+    "t2": {
+      "text": "\"El botón de pánico del plan intermedio nos salvó de un susto hace poco. La respuesta fue mucho más rápida de lo que esperaba.\"",
+      "name": "Juan Pablo Ruiz",
+      "role": "Usuario Intermedio"
+    },
+    "t3": {
+      "text": "\"La integración con cámaras de mi negocio me permite monitorear todo desde un solo lugar. Vale cada centavo del plan premium.\"",
+      "name": "Elena Ferrán",
+      "role": "Empresaria"
+    }
+  },
+  "about": {
+    "title": "Nosotros",
+    "description": "Somos un equipo dedicado a ofrecer soluciones de seguridad digitales de alta calidad. Nuestra misión es potenciar tu tranquilidad a través de tecnología de punta y visualización de datos en tiempo real."
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "role": "Developer"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "namePlaceholder": "Tu Nombre",
+    "emailPlaceholder": "Tu Email",
+    "messagePlaceholder": "Tu Mensaje",
+    "submit": "Enviar Mensaje"
+  },
+  "footer": {
+    "copy": "© 2026 InstAlert. Vigilancia inteligente para tu comunidad."
+  }
+}
