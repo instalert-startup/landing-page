@@ -4,343 +4,217 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InstAlert - Seguridad en tiempo real</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-gray-900">
+<body>
 
-    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
-        <div class="container mx-auto flex justify-between items-center px-6 py-4">
-            <div class="flex items-center gap-2">
-                <div class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">!</div>
-                <span class="text-2xl font-extrabold tracking-tight">Inst<span class="text-red-600">Alert</span></span>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <div class="logo-icon">!</div>
+                <span>Inst<span class="text-primary">Alert</span></span>
             </div>
 
-            <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
-                <li><a href="#inicio" class="hover:text-red-600 transition" data-i18n="nav.home">Inicio</a></li>
-                <li><a href="#planes" class="hover:text-red-600 transition" data-i18n="nav.plans">Planes</a></li>
-                <li><a href="#testimonios" class="hover:text-red-600 transition" data-i18n="nav.testimonials">Testimonios</a></li>
-                <li><a href="#nosotros" class="hover:text-red-600 transition" data-i18n="nav.about">Nosotros</a></li>
-                <li><a href="#team" class="hover:text-red-600 transition" data-i18n="nav.team">Equipo</a></li>
+            <ul class="nav-links">
+                <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="#planes" data-i18n="nav.plans">Planes</a></li>
+                <li><a href="#testimonios" data-i18n="nav.testimonials">Testimonios</a></li>
+                <li><a href="#nosotros" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="#team" data-i18n="nav.team">Equipo</a></li>
             </ul>
 
-            <div class="flex items-center gap-4">
-                <!-- Language switch -->
-                <div class="flex items-center gap-2">
-                    <span id="label-es" class="text-sm font-bold text-gray-800 transition-opacity">ES</span>
-                    <label class="relative inline-flex cursor-pointer items-center" title="Switch language">
-                        <input type="checkbox" id="lang-toggle" class="peer sr-only">
-                        <div class="h-5 w-10 rounded-full bg-red-600
-                                    after:absolute after:left-[3px] after:top-[3px]
-                                    after:h-[14px] after:w-[14px] after:rounded-full
-                                    after:bg-white after:transition-all after:content-['']
-                                    peer-checked:after:translate-x-5
-                                    peer-focus:ring-2 peer-focus:ring-red-300">
-                        </div>
+            <div class="nav-actions">
+                <div class="lang-switch-container">
+                    <span id="label-es" class="lang-label active">ES</span>
+                    <label class="toggle-switch" title="Switch language">
+                        <input type="checkbox" id="lang-toggle">
+                        <span class="slider"></span>
                     </label>
-                    <span id="label-en" class="text-sm font-bold text-gray-400 transition-opacity">EN</span>
+                    <span id="label-en" class="lang-label">EN</span>
                 </div>
-
-                <a href="#contacto" class="bg-red-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition" data-i18n="nav.login">
-                    Iniciar sesión
-                </a>
+                <a href="https://instalert-front-end.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="nav.login">Iniciar sesión</a>
             </div>
         </div>
     </nav>
 
-    <header id="inicio" class="min-h-[80vh] flex items-center bg-white">
-        <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 space-y-6">
-                <h1 class="text-5xl md:text-6xl font-black leading-tight text-slate-900">
-                    <span data-i18n="hero.titleBefore">Anticípate a situaciones de </span><span class="text-red-600" data-i18n="hero.titleHighlight">riesgo</span><span data-i18n="hero.titleAfter"> en tiempo real</span>
+    <header id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>
+                    <span data-i18n="hero.titleBefore">Anticípate a situaciones de </span>
+                    <span class="text-primary" data-i18n="hero.titleHighlight">riesgo</span>
+                    <span data-i18n="hero.titleAfter"> en tiempo real</span>
                 </h1>
-                <div class="space-y-4">
-                    <p class="text-lg text-gray-700 font-semibold" data-i18n="hero.subtitle">Seguridad inteligente para tu día a día</p>
-                    <p class="text-gray-500 text-lg" data-i18n="hero.description">Recibe alertas, visualiza zonas de riesgo y actúa rápidamente para mantenerte seguro.</p>
+                <p class="subtitle" data-i18n="hero.subtitle">Seguridad inteligente para tu día a día</p>
+                <p class="description" data-i18n="hero.description">Recibe alertas, visualiza zonas de riesgo y actúa rápidamente para mantenerte seguro.</p>
+                <a href="https://instalert-front-end.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn btn-large btn-primary shadow-glow" data-i18n="hero.cta">Iniciar Sesión</a>            </div>
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800" alt="Mapa de riesgo" data-i18n-alt="hero.imageAlt">
                 </div>
-                <div class="pt-4">
-                    <a href="#planes" class="inline-block bg-red-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-red-200 hover:bg-red-700 transition transform hover:-translate-y-1" data-i18n="hero.cta">
-                        Ver zonas de riesgo
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 relative">
-                <div class="rounded-3xl shadow-2xl border border-gray-100 transform md:rotate-2 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800" alt="Mapa de riesgo" data-i18n-alt="hero.imageAlt" class="w-full">
-                </div>
-                <div class="absolute top-1/3 left-1/2 w-4 h-4 bg-red-600 rounded-full animate-ping"></div>
-                <div class="absolute top-1/3 left-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                <div class="ping-dot animation-ping"></div>
+                <div class="ping-dot solid"></div>
             </div>
         </div>
     </header>
 
-    <section id="planes" class="py-24 bg-gray-50">
-        <h2 class="text-4xl font-black text-center mb-16" data-i18n="plans.title">Planes de Seguridad</h2>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-6">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 w-80 text-center">
-                <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="plans.basic.name">Básico</h3>
-                <p class="text-3xl font-black text-red-600 mb-6" data-i18n="plans.basic.price">Gratis</p>
-                <ul class="text-gray-600 space-y-3 mb-8 text-left">
-                    <li>✔ <span data-i18n="plans.basic.feature1">Alertas comunitarias</span></li>
-                    <li>✔ <span data-i18n="plans.basic.feature2">Reporte de incidentes</span></li>
-                </ul>
-                <button class="w-full border-2 border-red-600 text-red-600 font-bold py-2 rounded-lg hover:bg-red-50 transition" data-i18n="plans.basic.cta">Elegir</button>
-            </div>
-            <div class="bg-red-600 text-white p-8 rounded-2xl shadow-2xl shadow-red-200 w-80 text-center md:scale-110">
-                <h3 class="text-2xl font-bold mb-4" data-i18n="plans.standard.name">Intermedio</h3>
-                <p class="text-3xl font-black mb-6" data-i18n="plans.standard.price">S/ 19.90</p>
-                <ul class="space-y-3 mb-8 text-left">
-                    <li>✔ <span data-i18n="plans.standard.feature1">Todo lo básico</span></li>
-                    <li>✔ <span data-i18n="plans.standard.feature2">Botón de pánico</span></li>
-                    <li>✔ <span data-i18n="plans.standard.feature3">Historial de alertas</span></li>
-                </ul>
-                <button class="w-full bg-white text-red-600 font-bold py-2 rounded-lg hover:bg-gray-100 transition" data-i18n="plans.standard.cta">Elegir</button>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 w-80 text-center">
-                <h3 class="text-2xl font-bold mb-4 text-gray-800" data-i18n="plans.premium.name">Premium</h3>
-                <p class="text-3xl font-black text-red-600 mb-6" data-i18n="plans.premium.price">S/ 39.90</p>
-                <ul class="text-gray-600 space-y-3 mb-8 text-left">
-                    <li>✔ <span data-i18n="plans.premium.feature1">Monitoreo 24/7</span></li>
-                    <li>✔ <span data-i18n="plans.premium.feature2">Integración con cámaras</span></li>
-                </ul>
-                <button class="w-full border-2 border-red-600 text-red-600 font-bold py-2 rounded-lg hover:bg-red-50 transition" data-i18n="plans.premium.cta">Elegir</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonios" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-4" data-i18n="testimonials.title">Comunidad Segura</h2>
-            <p class="text-gray-500 text-center mb-16 text-lg" data-i18n="testimonials.subtitle">Lo que dicen quienes ya usan InstAlert para proteger a sus familias.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-md transition">
-                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
-                    <p class="text-gray-600 italic mb-6" data-i18n="testimonials.t1.text">"Desde que instalé la app me siento mucho más tranquila al caminar por mi barrio. Las alertas de la comunidad son increíblemente precisas."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-                        <div>
-                            <h4 class="font-bold" data-i18n="testimonials.t1.name">Carla Méndez</h4>
-                            <p class="text-sm text-red-600" data-i18n="testimonials.t1.role">Usuario Básico</p>
-                        </div>
-                    </div>
+    <section id="planes" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title" data-i18n="plans.title">Planes de Seguridad</h2>
+            
+            <div class="grid-3 plans-grid">
+                <div class="card plan-card">
+                    <h3 data-i18n="plans.basic.name">Básico</h3>
+                    <p class="price text-primary" data-i18n="plans.basic.price">Gratis</p>
+                    <ul>
+                        <li>✔ <span data-i18n="plans.basic.feature1">Alertas comunitarias</span></li>
+                        <li>✔ <span data-i18n="plans.basic.feature2">Reporte de incidentes</span></li>
+                    </ul>
+                    <button class="btn btn-outline" data-i18n="plans.basic.cta">Elegir</button>
+                </div>
+                
+                <div class="card plan-card featured bg-primary text-white">
+                    <h3 data-i18n="plans.standard.name">Intermedio</h3>
+                    <p class="price" data-i18n="plans.standard.price">S/ 19.90</p>
+                    <ul>
+                        <li>✔ <span data-i18n="plans.standard.feature1">Todo lo básico</span></li>
+                        <li>✔ <span data-i18n="plans.standard.feature2">Botón de pánico</span></li>
+                        <li>✔ <span data-i18n="plans.standard.feature3">Historial de alertas</span></li>
+                    </ul>
+                    <button class="btn btn-white" data-i18n="plans.standard.cta">Elegir</button>
                 </div>
 
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-md transition">
-                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
-                    <p class="text-gray-600 italic mb-6" data-i18n="testimonials.t2.text">"El botón de pánico del plan intermedio nos salvó de un susto hace poco. La respuesta fue mucho más rápida de lo que esperaba."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-                        <div>
-                            <h4 class="font-bold" data-i18n="testimonials.t2.name">Juan Pablo Ruiz</h4>
-                            <p class="text-sm text-red-600" data-i18n="testimonials.t2.role">Usuario Intermedio</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-md transition">
-                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
-                    <p class="text-gray-600 italic mb-6" data-i18n="testimonials.t3.text">"La integración con cámaras de mi negocio me permite monitorear todo desde un solo lugar. Vale cada centavo del plan premium."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-                        <div>
-                            <h4 class="font-bold" data-i18n="testimonials.t3.name">Elena Ferrán</h4>
-                            <p class="text-sm text-red-600" data-i18n="testimonials.t3.role">Empresaria</p>
-                        </div>
-                    </div>
+                <div class="card plan-card">
+                    <h3 data-i18n="plans.premium.name">Premium</h3>
+                    <p class="price text-primary" data-i18n="plans.premium.price">S/ 39.90</p>
+                    <ul>
+                        <li>✔ <span data-i18n="plans.premium.feature1">Monitoreo 24/7</span></li>
+                        <li>✔ <span data-i18n="plans.premium.feature2">Integración con cámaras</span></li>
+                    </ul>
+                    <button class="btn btn-outline" data-i18n="plans.premium.cta">Elegir</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="nosotros" class="py-24 container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-black mb-8" data-i18n="about.title">Nosotros</h2>
-        <p class="max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed" data-i18n="about.description">Somos un equipo dedicado a ofrecer soluciones de seguridad digitales de alta calidad. Nuestra misión es potenciar tu tranquilidad a través de tecnología de punta y visualización de datos en tiempo real.</p>
-    </section>
+    <section id="testimonios" class="section">
+        <div class="container text-center">
+            <h2 class="section-title" data-i18n="testimonials.title">Comunidad Segura</h2>
+            <p class="section-subtitle" data-i18n="testimonials.subtitle">Lo que dicen quienes ya usan InstAlert para proteger a sus familias.</p>
 
-    <section id="team" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-16" data-i18n="team.title">Nuestro Equipo</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100">
-                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-lg leading-tight">Piero Molina</h3>
-                    <p class="text-red-600 font-medium" data-i18n="team.role">Developer</p>
+            <div class="grid-3 text-left">
+                <div class="card testimony-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote" data-i18n="testimonials.t1.text">"Desde que instalé la app me siento mucho más tranquila..."</p>
+                    <div class="user-info">
+                        <img src="img/carlamendez.PNG" alt="Carla Méndez" class="avatar" style="object-fit: cover;">
+                        <div>
+                            <h4 data-i18n="testimonials.t1.name">Carla Méndez</h4>
+                            <span class="role text-primary" data-i18n="testimonials.t1.role">Usuario Básico</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100">
-                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-lg leading-tight">Sebastian Diaz</h3>
-                    <p class="text-red-600 font-medium" data-i18n="team.role">Developer</p>
+
+                <div class="card testimony-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote" data-i18n="testimonials.t2.text">"El botón de pánico del plan intermedio nos salvó..."</p>
+                    <div class="user-info">
+                        <img src="img/juanpablo.PNG" alt="Juan Pablo Ruiz" class="avatar" style="object-fit: cover;">
+                        <div>
+                            <h4 data-i18n="testimonials.t2.name">Juan Pablo Ruiz</h4>
+                            <span class="role text-primary" data-i18n="testimonials.t2.role">Usuario Intermedio</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100">
-                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-lg leading-tight">Alexander Justo</h3>
-                    <p class="text-red-600 font-medium" data-i18n="team.role">Developer</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100">
-                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                    <h3 class="font-bold text-lg leading-tight">Breithner Perez</h3>
-                    <p class="text-red-600 font-medium" data-i18n="team.role">Developer</p>
+
+                <div class="card testimony-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote" data-i18n="testimonials.t3.text">"La integración con cámaras de mi negocio me permite..."</p>
+                    <div class="user-info">
+                        <img src="img/elenaferran.PNG" alt="Elena Ferrán" class="avatar" style="object-fit: cover;">
+                        <div>
+                            <h4 data-i18n="testimonials.t3.name">Elena Ferrán</h4>
+                            <span class="role text-primary" data-i18n="testimonials.t3.role">Empresaria</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-24 bg-slate-900 text-white text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-black mb-12" data-i18n="contact.title">Contáctanos</h2>
-            <form class="max-w-lg mx-auto space-y-4">
-                <input type="text" placeholder="Tu Nombre" data-i18n-placeholder="contact.namePlaceholder" class="w-full p-4 rounded-xl text-gray-900 focus:ring-2 focus:ring-red-600 outline-none">
-                <input type="email" placeholder="Tu Email" data-i18n-placeholder="contact.emailPlaceholder" class="w-full p-4 rounded-xl text-gray-900 focus:ring-2 focus:ring-red-600 outline-none">
-                <textarea placeholder="Tu Mensaje" data-i18n-placeholder="contact.messagePlaceholder" class="w-full p-4 rounded-xl h-32 text-gray-900 focus:ring-2 focus:ring-red-600 outline-none"></textarea>
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 p-4 rounded-xl font-bold text-lg transition shadow-lg shadow-red-900/20" data-i18n="contact.submit">Enviar Mensaje</button>
+    <section id="nosotros" class="section bg-white">
+        <div class="container text-center">
+            <h2 class="section-title" data-i18n="about.title">Nosotros</h2>
+            <p class="about-text" data-i18n="about.description">Somos un equipo dedicado a ofrecer soluciones de seguridad digitales de alta calidad. Nuestra misión es potenciar tu tranquilidad a través de tecnología de punta y visualización de datos en tiempo real.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 48px; text-align: left;">
+                
+                <div class="card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 800;">Video About The Team</h3>
+                    <iframe width="100%" height="250" src="https://www.youtube-nocookie.com/embed/4doFrCMaRL4?rel=0" title="Video About The Team" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px; margin-bottom: 16px;"></iframe>
+                    <p style="color: var(--text-muted); line-height: 1.6;">Conoce a las mentes detrás de InstAlert. Un grupo de desarrolladores apasionados y comprometidos con la innovación tecnológica para crear entornos más seguros.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 800;">Video About the Product</h3>
+                    <iframe width="100%" height="250" src="https://www.youtube-nocookie.com/embed/4doFrCMaRL4?rel=0" title="Video About the Product" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px; margin-bottom: 16px;"></iframe>
+                    <p style="color: var(--text-muted); line-height: 1.6;">Descubre cómo funciona nuestra aplicación en tiempo real. Explora las características de mapeo, notificaciones y el uso del botón de pánico en situaciones de riesgo.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title" data-i18n="team.title">Nuestro Equipo</h2>
+            <div class="grid-4">
+                <div class="card team-card">
+                    <img src="img/piero.png" alt="Piero Molina" class="avatar-large" style="object-fit: cover;">
+                    <h3>Piero Molina</h3>
+                    <p class="text-primary" data-i18n="team.role">Developer</p>
+                </div>
+                <div class="card team-card">
+                    <img src="img/sebastian.PNG" alt="Sebastian Diaz" class="avatar-large" style="object-fit: cover;">
+                    <h3>Sebastian Diaz</h3>
+                    <p class="text-primary" data-i18n="team.role">Developer</p>
+                </div>
+                <div class="card team-card">
+                    <img src="img/alexander.png" alt="Alexander Justo" class="avatar-large" style="object-fit: cover;">
+                    <h3>Alexander Justo</h3>
+                    <p class="text-primary" data-i18n="team.role">Developer</p>
+                </div>
+                <div class="card team-card">
+                    <img src="img/breithner.png" alt="Breithner Perez" class="avatar-large" style="object-fit: cover;">
+                    <h3>Breithner Perez</h3>
+                    <p class="text-primary" data-i18n="team.role">Developer</p>
+                </div>
+                <div class="card team-card">
+                    <img src="img/johan.png" alt="Johan Janampa" class="avatar-large" style="object-fit: cover;">
+                    <h3>Johan Janampa</h3>
+                    <p class="text-primary" data-i18n="team.role">Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Contáctanos</h2>
+            <form class="contact-form">
+                <input type="text" data-i18n-placeholder="contact.namePlaceholder" placeholder="Tu Nombre" required>
+                <input type="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="Tu Email" required>
+                <textarea data-i18n-placeholder="contact.messagePlaceholder" placeholder="Tu Mensaje" required></textarea>
+                <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.submit">Enviar Mensaje</button>
             </form>
         </div>
     </section>
 
-    <footer class="py-10 bg-slate-950 text-center text-gray-500 border-t border-slate-800">
+    <footer class="footer">
         <p data-i18n="footer.copy">© 2026 InstAlert. Vigilancia inteligente para tu comunidad.</p>
     </footer>
 
-    <script>
-        const i18n = {
-            currentLang: 'es',
-
-            translations: {
-                es: {
-                    page: { title: "InstAlert - Seguridad en tiempo real" },
-                    nav: {
-                        home: "Inicio", plans: "Planes", testimonials: "Testimonios",
-                        about: "Nosotros", team: "Equipo", login: "Iniciar sesión"
-                    },
-                    hero: {
-                        titleBefore: "Anticípate a situaciones de ",
-                        titleHighlight: "riesgo",
-                        titleAfter: " en tiempo real",
-                        subtitle: "Seguridad inteligente para tu día a día",
-                        description: "Recibe alertas, visualiza zonas de riesgo y actúa rápidamente para mantenerte seguro.",
-                        cta: "Ver zonas de riesgo",
-                        imageAlt: "Mapa de riesgo"
-                    },
-                    plans: {
-                        title: "Planes de Seguridad",
-                        basic:    { name: "Básico",     price: "Gratis",    feature1: "Alertas comunitarias",  feature2: "Reporte de incidentes",   cta: "Elegir" },
-                        standard: { name: "Intermedio", price: "S/ 19.90",  feature1: "Todo lo básico",        feature2: "Botón de pánico",         feature3: "Historial de alertas", cta: "Elegir" },
-                        premium:  { name: "Premium",    price: "S/ 39.90",  feature1: "Monitoreo 24/7",        feature2: "Integración con cámaras", cta: "Elegir" }
-                    },
-                    testimonials: {
-                        title: "Comunidad Segura",
-                        subtitle: "Lo que dicen quienes ya usan InstAlert para proteger a sus familias.",
-                        t1: { text: '"Desde que instalé la app me siento mucho más tranquila al caminar por mi barrio. Las alertas de la comunidad son increíblemente precisas."', name: "Carla Méndez",    role: "Usuario Básico"     },
-                        t2: { text: '"El botón de pánico del plan intermedio nos salvó de un susto hace poco. La respuesta fue mucho más rápida de lo que esperaba."',           name: "Juan Pablo Ruiz", role: "Usuario Intermedio" },
-                        t3: { text: '"La integración con cámaras de mi negocio me permite monitorear todo desde un solo lugar. Vale cada centavo del plan premium."',           name: "Elena Ferrán",    role: "Empresaria"         }
-                    },
-                    about: {
-                        title: "Nosotros",
-                        description: "Somos un equipo dedicado a ofrecer soluciones de seguridad digitales de alta calidad. Nuestra misión es potenciar tu tranquilidad a través de tecnología de punta y visualización de datos en tiempo real."
-                    },
-                    team: { title: "Nuestro Equipo", role: "Developer" },
-                    contact: {
-                        title: "Contáctanos", namePlaceholder: "Tu Nombre",
-                        emailPlaceholder: "Tu Email", messagePlaceholder: "Tu Mensaje", submit: "Enviar Mensaje"
-                    },
-                    footer: { copy: "© 2026 InstAlert. Vigilancia inteligente para tu comunidad." }
-                },
-
-                en: {
-                    page: { title: "InstAlert - Real-time Security" },
-                    nav: {
-                        home: "Home", plans: "Plans", testimonials: "Testimonials",
-                        about: "About Us", team: "Team", login: "Sign In"
-                    },
-                    hero: {
-                        titleBefore: "Anticipate ",
-                        titleHighlight: "risk",
-                        titleAfter: " situations in real time",
-                        subtitle: "Intelligent security for your daily life",
-                        description: "Receive alerts, visualize risk zones, and act quickly to stay safe.",
-                        cta: "View Risk Zones",
-                        imageAlt: "Risk map"
-                    },
-                    plans: {
-                        title: "Security Plans",
-                        basic:    { name: "Basic",    price: "Free",      feature1: "Community alerts",       feature2: "Incident reporting",   cta: "Choose" },
-                        standard: { name: "Standard", price: "S/ 19.90",  feature1: "Everything in Basic",    feature2: "Panic button",         feature3: "Alert history", cta: "Choose" },
-                        premium:  { name: "Premium",  price: "S/ 39.90",  feature1: "24/7 monitoring",        feature2: "Camera integration",   cta: "Choose" }
-                    },
-                    testimonials: {
-                        title: "Safe Community",
-                        subtitle: "What those who already use InstAlert to protect their families say.",
-                        t1: { text: '"Since I installed the app I feel much safer walking around my neighborhood. The community alerts are incredibly accurate."', name: "Carla Méndez",    role: "Basic User"    },
-                        t2: { text: '"The panic button on the standard plan saved us from a scare recently. The response was much faster than I expected."',      name: "Juan Pablo Ruiz", role: "Standard User" },
-                        t3: { text: '"The camera integration for my business lets me monitor everything from one place. Worth every penny of the premium plan."', name: "Elena Ferrán",    role: "Business Owner" }
-                    },
-                    about: {
-                        title: "About Us",
-                        description: "We are a team dedicated to offering high-quality digital security solutions. Our mission is to enhance your peace of mind through cutting-edge technology and real-time data visualization."
-                    },
-                    team: { title: "Our Team", role: "Developer" },
-                    contact: {
-                        title: "Contact Us", namePlaceholder: "Your Name",
-                        emailPlaceholder: "Your Email", messagePlaceholder: "Your Message", submit: "Send Message"
-                    },
-                    footer: { copy: "© 2026 InstAlert. Intelligent surveillance for your community." }
-                }
-            },
-
-            init() {
-                const saved = localStorage.getItem('instAlert_lang') || 'es';
-                this.setLang(saved);
-                this.setupToggle();
-            },
-
-            setLang(lang) {
-                this.currentLang = lang;
-                document.documentElement.lang = lang;
-                document.title = this.t('page.title');
-                localStorage.setItem('instAlert_lang', lang);
-                this.applyTranslations();
-                this.updateLabels();
-                document.getElementById('lang-toggle').checked = lang === 'en';
-            },
-
-            t(key) {
-                return key.split('.').reduce((obj, k) => obj?.[k], this.translations[this.currentLang]) ?? key;
-            },
-
-            applyTranslations() {
-                document.querySelectorAll('[data-i18n]').forEach(el => {
-                    el.textContent = this.t(el.dataset.i18n);
-                });
-                document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                    el.placeholder = this.t(el.dataset.i18nPlaceholder);
-                });
-                document.querySelectorAll('[data-i18n-alt]').forEach(el => {
-                    el.alt = this.t(el.dataset.i18nAlt);
-                });
-            },
-
-            updateLabels() {
-                const isEN = this.currentLang === 'en';
-                document.getElementById('label-es').className =
-                    `text-sm font-bold transition-opacity ${isEN ? 'text-gray-400' : 'text-gray-800'}`;
-                document.getElementById('label-en').className =
-                    `text-sm font-bold transition-opacity ${isEN ? 'text-gray-800' : 'text-gray-400'}`;
-            },
-
-            setupToggle() {
-                document.getElementById('lang-toggle').addEventListener('change', e => {
-                    this.setLang(e.target.checked ? 'en' : 'es');
-                });
-                this.updateLabels();
-            }
-        };
-
-        i18n.init();
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -11,13 +11,13 @@
     "login": "Sign In"
   },
   "hero": {
-    "titleBefore": "Anticipate ",
-    "titleHighlight": "risk",
-    "titleAfter": " situations in real time",
-    "subtitle": "Intelligent security for your daily life",
-    "description": "Receive alerts, visualize risk zones, and act quickly to stay safe.",
-    "cta": "View Risk Zones",
-    "imageAlt": "Risk map"
+    "titleBefore": "Anticípate a situaciones de ",
+    "titleHighlight": "riesgo",
+    "titleAfter": " en tiempo real",
+    "subtitle": "Seguridad inteligente para tu día a día",
+    "description": "Recibe alertas, visualiza zonas de riesgo y actúa rápidamente para mantenerte seguro.",
+    "cta": "Iniciar Sesión",
+    "imageAlt": "Mapa de riesgo"
   },
   "plans": {
     "title": "Security Plans",
